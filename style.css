@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&family=Crimson+Text:ital@1&display=swap');
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+    color: rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+/* nav bar navigation */
+.nav-bar {
+    background-color:  rgba(20, 20, 20);
+    display: flex;
+    width: 100vw;
+}
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    color: white;
+}
+.nav-brand{
+    width: 50px;
+    height: 50px;
+}
+.nav-brand img {
+    width: 100%;
+    height: 100%;
+}
+.nav-start {
+    display: flex;
+    align-items: center;
+}
+.handburger {
+    display: none;
+}
+#bars {
+font-size: 30px;}
+#dashboard {
+    display: none;
+}
+#setting{
+    display: none;
+}
+.nav-input input {
+    /*width: 300px;
+    */padding: 8px 12px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-left: 18px;
+    margin-right: 1px;
+    font-size: 17px;
+    background-color: transparent;
+    color: white;
+    border:1px solid rgb(56, 56, 56);
+    transition: width ease 0.5s;
+    -webkit-transition: width ease 0.5s;
+    -moz-transition: width ease 0.5s;
+    -ms-transition: width ease 0.5s;
+    -o-transition: width ease 0.5s;
+}
+
+.nav-items a {
+    margin-left: 12px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+.nav-end {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    align-items: center;
+}
+.dropdown a {
+    font-size: 22px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: rgb(15, 15, 15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 5px;
+}
+.dropdown-icon {
+    cursor: pointer;
+}
+.fa-bell {
+    font-size: 22px;
+    color: white;   
+}
+.dropdown-icon i {
+    font-size: 22px;
+}
+.item-1{
+   z-index: 4;
+   position: absolute;
+   width: 170px;
+   background: white;
+   border-radius: 14px;
+   -webkit-border-radius: 14px;
+   -moz-border-radius: 14px;
+   -ms-border-radius: 14px;
+   -o-border-radius: 14px;
+   padding-left: 15px;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   top: 3.9rem;
+   right: 4.9rem;
+   box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+}
+.item-2{
+    z-index: 4;
+    position: absolute;
+   width: 170px;
+   background: white;
+   border-radius: 14px;
+   -webkit-border-radius: 14px;
+   -moz-border-radius: 14px;
+   -ms-border-radius: 14px;
+   -o-border-radius: 14px;
+   padding-left: 15px;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   top: 3.9rem;
+   right: 1.8rem;
+   box-shadow: 5px 5px rgba(0, 0, 0, 0.3);}
+.container {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+.images {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-image img {
+    width: 800px;
+    margin-bottom: 10px;
+}
+.card-body {
+    max-width: 600px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.overview {
+    line-height: 36px;
+}
+h5 {
+    margin: 18px;
+}
+.title {
+    font-size: 34px;
+    color: black;   
+}
+@media screen and (max-width: 1000px){
+    .nav-end {
+        width: 50px;
+    }    
+    .handburger{
+        display: block;
+    }
+    #setting {
+        display: block;
+    }
+    .nav-end {
+        margin-right: 0;
+    }
+    .nav-start {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-input {
+        display: none;
+        position: relative;
+        left: -14.8rem;
+        margin-top: 15px;
+
+    }
+    .nav-items a {
+        display: none;
+        position: relative;
+        left: -22rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 18px;
+        transition: slide ease 0.5s ;
+        -webkit-transition: slide ease 0.5s ;
+        -moz-transition: slide ease 0.5s ;
+        -ms-transition: slide ease 0.5s ;
+        -o-transition: slide ease 0.5s ;
+}
+     
+    .dropdown-icon {
+        display: none;
+    } 
+    #bell{
+        font-size: 30px;
+    }
+    .toggle {
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .container {
+        width: 100vw;
+        padding: 10px;
+    }
+    .card-image img {
+        width: 500px;
+        margin-top: 14px;    
+    }
+}

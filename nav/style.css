@@ -1,0 +1,234 @@
+body {
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 70px;
+    background-color: #24292e;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;;
+}
+
+.hamburger {
+    margin-left: 1.5rem;
+    display: none;
+}
+
+.hamburger i {
+    font-size: 39px;
+    color: skyblue;
+    cursor: pointer;
+}
+
+.hamburger i:active {
+    color: blue;
+    filter: brightness(110);
+    -webkit-filter: brightness(110);
+}
+
+.nav-left{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.nav-brand i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: crimson;
+    color: cornflowerblue;
+    font-size: 35px;
+    margin: 5px 40px 0 45px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#nav-input {
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    padding: 10px 40px 10px 12px;
+    border: 1px solid #d1d5da;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+#nav-item {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#nav-item a{
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 22px;
+    color: white;
+}
+.nav-right{
+display: flex;
+flex-direction: row;
+margin-right: 35px;
+}
+
+.nav-icons{
+display: flex;
+flex-direction: row;
+}
+
+.nav-icons i {
+    color: white;
+    font-size: 22px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    /* display: none; */
+    background-color: rgb(253, 253, 253);
+    border: 1px solid  #d1d5da;
+    border-radius: 8px;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 4px;
+
+}
+.setting-dropdown {
+    position: absolute;
+    background-color: rgb(253, 253, 253);
+    border: 1px solid  #d1d5da;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-top: 7px;
+    margin-left: 4px;
+
+}
+.notification-dropdown {
+    position: absolute;
+    background-color: rgb(253, 253, 253);
+    border: 1px solid  #d1d5da;
+    border-radius: 8px;
+    margin-top: 7px;
+    right: 0.05rem;
+}
+#nav-item{
+    display: flex;
+    flex-direction: row;
+}
+
+.user-dropdown a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-decoration: none;
+    padding: 5px 15px 18px 10px;
+}
+.setting-dropdown a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 5px 15px 18px 10px;
+}
+.notification-dropdown a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 5px 15px 18px 10px;
+}
+#border-bottom {
+    border-top: 1px solid rgb(221, 217, 217);
+    border-bottom: 1px solid rgb(221, 217, 217);
+}
+#border {
+    border-top: 1px solid rgb(221, 217, 217);
+}
+
+.notification-dropdown a:hover {
+    color:rgb(76, 76, 212);
+}  
+.user-dropdown a:hover {
+    color:rgb(76, 76, 212);
+}  
+.setting-dropdown a:hover {
+    color:rgb(76, 76, 212);
+}  
+
+.display {
+    display: block !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 4.4rem;
+        left: -0.8rem;
+        background:#24292e ;
+        width: 101.3vw;
+        height: 80vh;
+        z-index: 4;
+        transition: ease-in 5s;
+        -webkit-transition: ease-in 5s;
+        -moz-transition: ease-in 5s;
+        -ms-transition: ease-in 5s;
+        -o-transition: ease-in 5s;
+        animation-name: slidein;
+        animation-duration: 2s;}
+    #nav-item{
+        flex-direction: column;
+        height: 80%;
+        justify-content: space-around;
+    }
+    #borderbottom {
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid rgb(221, 217, 217);
+}
+
+    #nav-input{
+        margin-top: 15px;
+        margin-left: 20px;
+        width: 100vw;
+    }
+   
+    .nav-icon-user {
+        display: none;
+    }
+    .nav-icon-settings {
+        display: none;
+    }
+    .hamburger {
+        margin-left: 1.5rem;
+        display: block;
+    }
+    @keyframes slidein {
+        0% {opacity: 0;}
+        50% {opacity: 0.5;}
+        100% {opacity: 1;}
+    }
+}
